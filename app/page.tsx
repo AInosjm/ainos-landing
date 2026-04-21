@@ -334,7 +334,7 @@ function Deployments() {
       proof: [
         {
           name: "SmartPort · Busan",
-          body: "5G-enabled port infrastructure proof of concept at Busan Port, in partnership with Fori Korea and Ericsson.",
+          body: "5G-enabled port infrastructure proof of concept at Busan Port, in partnership with Fori Automation and a 5G network company.",
           role: "Terminal-level logistics as continuous decision surface.",
         },
         {
@@ -367,13 +367,13 @@ function Deployments() {
       title: "Behavior-rich, emotionally resonant surfaces.",
       proof: [
         {
-          name: "Nintendo IP character app → JC Penney retail",
+          name: "Character AI across software and retail",
           body: "AI-native character chatting experience, expanding from software into ~120 JC Penney mall locations in the United States.",
           role: "Continuous character, media, and physical-space interaction as one experiential system.",
         },
         {
-          name: "Health · partnership with Yakup News",
-          body: "Platform that interprets user condition and recommends the next action — in partnership with Yakup News (약업신문).",
+          name: "Health · partnership with MMG",
+          body: "Platform that interprets user condition and recommends the next action — in partnership with MMG.",
           role: "Semantic understanding of state → next-best action, at life-decision scale.",
         },
       ],
@@ -704,16 +704,33 @@ function Foundation() {
                 <ul className="divide-y divide-hairline">
                   {[
                     { name: "Fori Automation", role: "SmartPort infrastructure partner" },
-                    { name: "Ericsson", role: "SmartPort · 5G architecture" },
-                    { name: "Busan Port", role: "Active PoC site" },
+                    {
+                      name: "Ericsson",
+                      role: "SmartPort · 5G architecture",
+                      blurred: true,
+                      blurAriaLabel: "Confidential telecom deployment partner",
+                      roleAriaLabel: "SmartPort 5G architecture",
+                    },
                     { name: "Vitality", role: "Insurance AX partnership (South Africa)" },
-                    { name: "Nintendo IP partnerships", role: "Entertainment / character AI" },
+                    {
+                      name: "Nintendo IP partnerships",
+                      role: "Entertainment / character AI",
+                      blurred: true,
+                      blurAriaLabel: "Confidential entertainment IP partner",
+                      roleAriaLabel: "Entertainment character AI",
+                    },
                     {
                       name: "JC Penney",
                       role: "100+ shopping malls · potential entertainment partnership",
                       blurred: true,
+                      blurAriaLabel: "Confidential retail deployment partner",
+                      roleAriaLabel: "100 plus shopping malls potential entertainment partnership",
                     },
-                    { name: "Yakup News (약업신문)", role: "Health platform distribution" },
+                    { name: "MMG", role: "Health platform distribution" },
+                    {
+                      name: "HYC (한양디지털헬스케어센터)",
+                      role: "Movement-code behavior AI · digital healthcare collaboration",
+                    },
                   ].map((p) => (
                     <li
                       key={p.name}
@@ -724,13 +741,13 @@ function Foundation() {
                           "font-display text-[1.1rem] text-bone-50 transition-colors duration-200 group-hover:text-accent",
                           p.blurred ? "blur-sm select-none opacity-80" : "",
                         ].join(" ")}
-                        aria-label={p.blurred ? "Confidential retail deployment partner" : undefined}
+                        aria-label={p.blurred ? p.blurAriaLabel : undefined}
                       >
                         {p.name}
                       </span>
                       <span
                         className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-400"
-                        aria-label={p.blurred ? "100 plus shopping malls potential entertainment partnership" : undefined}
+                        aria-label={p.blurred ? p.roleAriaLabel : undefined}
                       >
                         {p.role}
                       </span>
