@@ -6,6 +6,7 @@ type RevealProps = {
   as?: keyof React.JSX.IntrinsicElements;
   delay?: number;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
   once?: boolean;
 };
@@ -14,6 +15,7 @@ export default function Reveal({
   as: Tag = "div",
   delay = 0,
   className = "",
+  style,
   children,
   once = true,
 }: RevealProps) {
@@ -52,7 +54,7 @@ export default function Reveal({
     <Component
       ref={ref as React.Ref<HTMLElement>}
       className={`reveal ${className}`}
-      style={{ "--reveal-delay": `${delay}ms` } as React.CSSProperties}
+      style={{ ...(style ?? {}), "--reveal-delay": `${delay}ms` } as React.CSSProperties}
     >
       {children}
     </Component>

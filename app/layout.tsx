@@ -27,39 +27,38 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://ainos.ai"),
   title: {
-    default: "AiNOS — The Decision Operating System",
+    default: "AiNOS — Ontology-Driven AI Infrastructure",
     template: "%s · AiNOS",
   },
   description:
-    "AiNOS is building the Decision Operating System — a self-evolving semantic layer that understands context, determines what should happen next, and scales that capability across infrastructure, enterprises, and everyday life.",
+    "AiNOS builds ontology-driven AI infrastructure that turns domain signals into semantic structures so language models can reason with context, constraints, and evidence — across regulated, clinical, and physical environments.",
   applicationName: "AiNOS",
   authors: [{ name: "AiNOS" }],
   keywords: [
-    "Decision Operating System",
-    "AiNOS",
-    "ontology engine",
+    "ontology-driven AI",
     "AI infrastructure",
-    "AI transformation",
-    "semantic layer",
-    "agentic systems",
+    "domain AI",
+    "semantic infrastructure",
+    "ontology reasoning",
+    "LLM × ontology",
+    "AiNOS",
+    "Vector Institute",
+    "University of Toronto",
   ],
   openGraph: {
     type: "website",
-    title: "AiNOS — The Decision Operating System",
+    title: "AiNOS — Ontology-Driven AI Infrastructure",
     description:
-      "A self-evolving semantic layer that understands context, determines what should happen next, and scales that capability across infrastructure, enterprises, and everyday life.",
+      "Ontology-driven AI infrastructure for domain reasoning. Converting multimodal and operational signals into semantic structures across regulated, clinical, and physical environments.",
     siteName: "AiNOS",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AiNOS — The Decision Operating System",
+    title: "AiNOS — Ontology-Driven AI Infrastructure",
     description:
-      "A self-evolving semantic layer that understands context and determines what should happen next.",
+      "Ontology-driven AI infrastructure for domain reasoning across regulated, clinical, and physical environments.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

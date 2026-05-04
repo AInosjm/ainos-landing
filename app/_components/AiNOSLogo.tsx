@@ -1,5 +1,5 @@
 type AiNOSLogoProps = {
-  tone?: "light" | "muted";
+  tone?: "light" | "muted" | "dark" | "inverse";
   className?: string;
   title?: string;
 };
@@ -8,17 +8,27 @@ const toneVars = {
   light: {
     primary: "var(--bone-50)",
     secondary: "rgba(243,236,224,0.34)",
-    accent: "var(--accent)",
+    accent: "var(--blue-soft)",
   },
   muted: {
-    primary: "var(--bone-400)",
-    secondary: "rgba(142,133,115,0.24)",
-    accent: "var(--accent-soft)",
+    primary: "var(--text-muted)",
+    secondary: "rgba(93,102,119,0.32)",
+    accent: "var(--blue)",
+  },
+  dark: {
+    primary: "var(--text)",
+    secondary: "rgba(16,24,40,0.28)",
+    accent: "var(--blue)",
+  },
+  inverse: {
+    primary: "var(--text-inverse)",
+    secondary: "rgba(246,248,252,0.28)",
+    accent: "var(--violet-soft)",
   },
 } as const;
 
 export default function AiNOSLogo({
-  tone = "light",
+  tone = "dark",
   className = "",
   title = "AiNOS",
 }: AiNOSLogoProps) {
